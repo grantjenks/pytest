@@ -138,6 +138,18 @@ def pytest_addoption(parser):
         default=DEFAULT_LOG_DATE_FORMAT,
         help="log date format as used by the logging module.",
     )
+    add_option_ini(
+        "--log-filter-include",
+        dest="log_filter_include",
+        default=None,
+        help="log filter to include matching and descendant loggers.",
+    )
+    add_option_ini(
+        "--log-filter-exclude",
+        dest="log_filter_exclude",
+        default=None,
+        help="log filter to exclude matching and descendant loggers.",
+    )
     parser.addini(
         "log_cli",
         default=False,
@@ -158,6 +170,18 @@ def pytest_addoption(parser):
         dest="log_cli_date_format",
         default=None,
         help="log date format as used by the logging module.",
+    )
+    add_option_ini(
+        "--log-cli-filter-include",
+        dest="log_cli_filter_include",
+        default=None,
+        help="log filter to include matching and descendant loggers.",
+    )
+    add_option_ini(
+        "--log-cli-filter-exclude",
+        dest="log_cli_filter_exclude",
+        default=None,
+        help="log filter to exclude matching and descendant loggers.",
     )
     add_option_ini(
         "--log-file",
@@ -182,6 +206,18 @@ def pytest_addoption(parser):
         dest="log_file_date_format",
         default=DEFAULT_LOG_DATE_FORMAT,
         help="log date format as used by the logging module.",
+    )
+    add_option_ini(
+        "--log-file-filter-include",
+        dest="log_file_filter_include",
+        default=None,
+        help="log filter to include matching and descendant loggers.",
+    )
+    add_option_ini(
+        "--log-file-filter-exclude",
+        dest="log_file_filter_exclude",
+        default=None,
+        help="log filter to exclude matching and descendant loggers.",
     )
 
 
